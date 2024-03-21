@@ -1,0 +1,25 @@
+按照 requirement 文档配置虚拟环境具体过程解释：
+1. 将requirements_3.txt放入C:\Users\dell\.conda文件夹中
+2. 进入Anaconda Powershell Prompt
+3. 输入conda create -n requirements_3 python=3.8  
+    #回车安装
+4. 输入conda env list                                                     
+    #查看目前所拥有的虚拟环境
+5. 输入conda activate requirements_3                        
+    #激活并进入requirements_3虚拟环境，前缀变为（requirements_3）
+6. 输入conda list 查看requirements_3                          
+    #查看虚拟环境中有哪些安装包
+7. 输入pip install pandas 在requirements_3                 
+    #在虚拟环境中安装pandas
+8.输入pip install matplotlib 在requirements_3                 
+    #在虚拟环境中安装matplotlib，否则后期无法画图
+9. 输入conda install -n ipykernel --update-deps --force-reinstall
+    #在虚拟环境中安装Jupyter工具，否则无法Vscode在该虚拟环境中将无法使用Jupyter
+10. 退出并重新进入Anaconda Powershell Prompt，发现前缀仍为（base）
+11. 输入conda activate requirements_3
+    #再次激活requirements_3虚拟环境，前缀更改为（requirements_3）
+12. 输入conda list
+    #再次查看该虚拟环境中有哪些安装包
+13. 打开Vscode设置python解释器
+14. Ctrl+Shift+P点击Python: Select Interpreter选择Python 3.8.15('requirements_3')成功配置虚拟环境
+ 
